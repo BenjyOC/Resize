@@ -65,7 +65,6 @@ cpt=$(ls $1 | grep -E "jpg|JPG|png|PNG" | wc -l) # Recupere le nombre d'images p
 if [ cpt -eq 0 ]; then
     echo "Aucune image dans ce dossier"
 else
-    r
     for fic in $(ls $1 | grep -E "jpg|JPG|png|PNG")
 do
     res1=$(($i * 100)) 
