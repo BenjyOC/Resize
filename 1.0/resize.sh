@@ -34,7 +34,7 @@ init(){
     else
         echo "SELECTION DES BORNES (7 sont a rentrer)"
         echo "LA TAILLE DOIT ETRE INDIQUEE EN Mo !"
-        j=0
+        local j=0
         while [ $j != 7 ]; do
         	echo -n "BORNE $j : "
         	read borne
@@ -71,7 +71,7 @@ rename(){
 # La fonction resize utilise imagemagick afin de reduire la taille des images en fonction
 # des bornes
 resize(){
-	i=1
+	local i=1
 	for fic in $(ls $CHEMIN | grep -E "jpg|JPG|png|PNG")
 	do
 		res1=$(($i * 100)) 
